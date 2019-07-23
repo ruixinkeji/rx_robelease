@@ -60,7 +60,23 @@ class Imgtext extends AdminController
         }
         if(IS_POST){
             $params = $this->param;
-
+            $bannerId = $params['bannerId'];
+            $bannerName = $params['banner_name'];
+            $bannerUrl = $params['banner_url'];
+            $sort = $params['banner_order_sort'];
+            $bannerImg = $params['banner_cover'];
+            $editorValue = $params['banner_describe'];
+            $res = BannerModel::updateBanner([
+                'banner_name'=>$bannerName,
+                'banner_url'=>$bannerUrl,
+                'banner_order_sort'=>$sort,
+                'banner_cover'=>$bannerImg,
+                'banner_describe'=>$editorValue
+            ],$bannerId);
+            if($res>0){
+                return format_success_result();
+            }
+            return format_result("修改失败！",2001);
         }
         return view('banner-edit',['banner'=>$banner]);
     }

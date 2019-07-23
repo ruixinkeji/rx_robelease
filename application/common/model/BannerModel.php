@@ -33,4 +33,10 @@ class BannerModel extends Model
         return Sql::_save("banner",$data);
     }
 
+    //修改轮播图
+    public function updateBanner($data,$bannerId)
+    {
+        return Sql::_update("banner",['banner_id'=>$bannerId],$data);
+    }
+
 }
