@@ -1,0 +1,240 @@
+﻿{extend name='admin@public/base' /}
+
+
+{block name='seo'}
+<title>{$title|default='页面标题'}</title>
+{/block}
+
+<!--此页面不需要加载菜单栏重写覆盖-->
+{block name='menu'}
+{/block}
+
+<!--此页面不需要加载头部栏重写覆盖-->
+{block name='header'}
+{/block}
+
+{block name='content'}
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 商品管理 <span class="c-gray en">&gt;</span> 商品分类 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c"> 日期范围：
+        <input type="text" onfocus="WdatePicker()" id="datemin" class="input-text Wdate" style="width:120px;">
+        -
+        <input type="text" onfocus="WdatePicker()" id="datemax" class="input-text Wdate" style="width:120px;">
+        <input type="text" class="input-text" style="width:250px" placeholder="输入会员名称、电话、邮箱" id="" name="">
+        <button type="submit" class="btn btn-success radius" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜商品</button>
+    </div>
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除 </a> <a href="javascript:;" onclick="member_add('添加一级分类','{:url("admin/Goods/addCategoryLev1")}','1200','600')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加一级分类 </a></span> <span class="r">共有数据：<strong>{$category|count} </strong> 条</span> </div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
+            <thead>
+            <tr class="text-c">
+                <th width="25"><input type="checkbox" name="tag" value=""></th>
+                <th width="40">ID</th>
+                <th width="80">名称</th>
+                <th width="150">添加时间</th>
+                <th width="100">状态</th>
+                <th width="100">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name="category" id="item"}
+            <tr class="text-c">
+                <td><input type="checkbox" value="{$item['category_id']}" name="tag"></td>
+                <td>{$item['category_id']}</td>
+                <td>{$item['category_name']}</td>
+                <td>{$item['category_create_time'] | date="Y-m-d H:i:s"}</td>
+                {if ($item['category_status'] == 1) }
+                    <td class="td-status"><span class="label label-success radius">已启用</span></td>
+                    <td class="td-manage"><a style="text-decoration:none" onClick="member_stop(this,'{$item["category_id"]}')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a>
+                        <a title="编辑" href="javascript:;" onclick="member_edit1('编辑','{:url("admin/Goods/editCategory")}','{$item["category_id"]}','1200','600')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <a title="删除" href="javascript:;" onclick="member_del(this,'{$item["category_id"]}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                        <a title="添加二级分类" href="javascript:;" onclick="add_categoryLev2('添加二级分类','{:url("admin/Goods/addCategoryLev2")}','{$item["category_id"]}','1200','600')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe600;</i></a></td>
+                {else /}
+                     <td class="td-status"><span class="label label-danger radius">已停用</span></td>
+                     <td class="td-manage"><a style="text-decoration:none" onClick="member_start(this,'{$item["category_id"]}')" href="javascript:;" title="启用"><i class="Hui-iconfont">&#xe6e1;</i></a>
+                         <a title="编辑" href="javascript:;" onclick="member_edit1('编辑','{:url("admin/Goods/editCategory")}','{$item["category_id"]}','1200','600')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                         <a title="删除" href="javascript:;" onclick="member_del(this,'{$item["category_id"]}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                         <a title="添加二级分类" href="javascript:;" onclick="add_categoryLev2('添加二级分类','{:url("admin/Goods/addCategoryLev2")}','{$item["category_id"]}','1200','600')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe600;</i></a></td>
+                {/if}
+            </tr>
+                {notempty name="item['categoryLev2']"}
+                    {volist name="item['categoryLev2']" id="item2"}
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="{$item2['category_id']}" name="tag"></td>
+                            <td>{$item2['category_id']}</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||—{$item2['category_name']}</td>
+                            <td>{$item2['category_create_time'] | date="Y-m-d H:i:s"}</td>
+                            {if ($item2['category_status'] == 1) }
+                            <td class="td-status"><span class="label label-success radius">已启用</span></td>
+                            <td class="td-manage"><a style="text-decoration:none" onClick="member_stop(this,'{$item2["category_id"]}')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a>
+                                <a title="编辑" href="javascript:;" onclick="member_edit2('编辑','{:url("admin/Goods/editCategoryLev2")}','{$item2["category_id"]}','1200','600')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a title="删除" href="javascript:;" onclick="member_del(this,'{$item2["category_id"]}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                            {else /}
+                            <td class="td-status"><span class="label label-danger radius">已停用</span></td>
+                            <td class="td-manage"><a style="text-decoration:none" onClick="member_start(this,'{$item2["category_id"]}')" href="javascript:;" title="启用"><i class="Hui-iconfont">&#xe6e1;</i></a>
+                                <a title="编辑" href="javascript:;" onclick="member_edit2('编辑','{:url("admin/Goods/editCategoryLev2")}','{$item2["category_id"]}','1200','600')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a title="删除" href="javascript:;" onclick="member_del(this,'{$item2["category_id"]}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                            {/if}
+                        </tr>
+                    {/volist}
+                {/notempty}
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+{/block}
+
+{block name="js"}
+<script type="text/javascript">
+    /*分页*/
+    $(document).ready(function () {
+        $(".table-sort").dataTable({
+            // 这里写一些基本配置，例如：
+            "paging": true,    // 是否开启分页功能(默认开启)
+            "info": true,      // 是否显示分页的统计信息(默认开启)
+            "searching": true,  // 是否开启搜索功能(默认开启)
+            "ordering": true,  // 是否开启排序功能(默认开启)
+            // "order": [[1, 'asc']], // 设置默认排序的表格列[参数1是表格列的下标，从0开始]
+            "aoColumnDefs": [
+                //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+                {"orderable":false,"aTargets":[0,1,2,3,4,5]}// 制定列不参与排序
+            ]
+        });
+    });
+    /*添加一级分类*/
+    function member_add(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*添加二级分类*/
+    function add_categoryLev2(title,url,id,w,h){
+        url = url+"?categoryLev1Id="+id;
+        layer_show(title,url,w,h);
+    }
+
+    /*用户-查看*/
+    function member_show(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+
+    /*停用分类*/
+    function member_stop(obj,id){
+        layer.confirm('确认要停用分类吗？注意：停用一级分类会造成二级分类全部停用！',function(index){
+            $.ajax({
+                type: 'GET',
+                url: "{:url('admin/Goods/stopCategory')}"+"?categoryId="+id,
+                dataType: 'json',
+                success: function(data){
+                    if(data.code == 2000){
+                        // $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="member_start(this,id)" href="javascript:;" title="上架"><i class="Hui-iconfont">&#xe6e1;</i></a>');
+                        // $(obj).parents("tr").find(".td-status").html('<span class="label label-danger radius">已下架</span>');
+                        // $(obj).remove();
+                        layer.msg('已停用!',{icon: 5,time:3000});
+                        window.location.reload();
+                    }
+                },
+                error:function(data) {
+                    layer.msg('停用失败!',{icon: 2,time:1000});
+                },
+            });
+        });
+    }
+
+    /*启用分类*/
+    function member_start(obj,id){
+        layer.confirm('确认要启用分类吗？注意：一级分类被停用无法启用二级分类',function(index){
+            $.ajax({
+                type: 'GET',
+                url: "{:url('admin/Goods/startCategory')}"+"?categoryId="+id,
+                dataType: 'json',
+                success: function(data){
+                    if(data.code==2000){
+                        $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="member_stop(this,id)" href="javascript:;" title="上架"><i class="Hui-iconfont">&#xe631;</i></a>');
+                        $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已上架</span>');
+                        $(obj).remove();
+                        layer.msg('已启用!',{icon: 6,time:1000});
+                    }else {
+                        layer.msg(data.msg,{icon: 2,time:1500});
+                    }
+                },
+                error:function(data) {
+                    console.log(data.msg);
+                },
+            });
+        });
+    }
+    /*编辑一级分类*/
+    function member_edit1(title,url,id,w,h){
+        url = url + "?categoryId="+id;
+        layer_show(title,url,w,h);
+    }
+
+    /*编辑二级分类*/
+    function member_edit2(title,url,id,w,h){
+        url = url + "?categoryLev2Id="+id;
+        layer_show(title,url,w,h);
+    }
+
+    /*密码-修改*/
+    function change_password(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+    /*用户-删除*/
+    function member_del(obj,id){
+        alert("删除分类禁用！防止数据丢失！");
+        return;
+        layer.confirm('确认要删除吗,删除后不可恢复？',function(index){
+            $.ajax({
+                type: 'GET',
+                url: "{:url('admin/Goods/del')}"+"?goodsId="+id,
+                dataType: 'json',
+                success: function(data){
+                    if(data.code == 2000){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }else
+                    {
+                        layer.msg(data.msg,{icon:2,time:1000});
+                    }
+
+                },
+                error:function(data) {
+                    layer.msg('删除失败!',{icon:2,time:1000});
+                },
+            });
+        });
+    }
+
+    /*批量删除*/
+    function datadel(){
+        alert("商品分类禁用删除");
+        return;
+        var checkedbox = $("input[name='tag']:checked");
+        if(checkedbox.length == 0){
+            alert("请选择要删除的标签");
+        }else{
+            if(confirm("确认要批量删除吗,删除后不可恢复？")){
+                var res = checkedbox.map(function(){
+                    return this.value;
+                });
+                //window.location.href="${pageContext.request.contextPath}/deleteTags/ids="+res.toArray().join(",")+".action";
+                $.ajax({
+                    type: 'POST',
+                    url: "{:url('')}"+"?ids="+res.toArray().join(","),
+                    dataType: 'json',
+                    success: function(data){
+                        window.location.reload();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    },
+                    error:function(data) {
+                        layer.msg('删除失败',{icon:2,time:1000});
+                    },
+                });
+
+            }
+        }
+    }
+
+
+</script>
+{/block}

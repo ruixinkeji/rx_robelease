@@ -1,0 +1,20 @@
+<aside class="Hui-aside">
+    <div class="menu_dropdown bk_2">
+        {volist name="menu" id="item"}
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#{$item['icon']}</i> {$item['menu_name']}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            {notempty name="$item['sub_menu']"}
+            <dd>
+                <ul>
+                    {volist name="$item['sub_menu']" id="sonItem"}
+                    <li><a id="hov" data-href="{:url($sonItem['url'])}" data-title="{$sonItem['menu_name']}" href="javascript:void(0)">{$sonItem['menu_name']}</a></li>
+                    {/volist}
+                </ul>
+            </dd>
+            {/notempty}
+        </dl>
+        {/volist}
+
+    </div>
+</aside>
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>

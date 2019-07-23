@@ -1,0 +1,84 @@
+﻿{extend name="admin@public/base"}
+
+{block name="seo"}
+<title>{$title}</title>
+{/block}
+
+<!--此页面不需要加载菜单栏重写覆盖-->
+{block name='menu'}
+{/block}
+<!--此页面不需要加载头部栏重写覆盖-->
+{block name='header'}
+{/block}
+
+{block name="content"}
+<div class="header"><p style="font-size: 38px ; text-align: center ; color: #fff">礼服租赁系统后台<p></div>
+<div class="loginWraper">
+  <div id="loginform" class="loginBox">
+    <form class="form form-horizontal" action="" method="POST">
+      <input type="hidden" name="redisCodeKey" value="" id="redisCodeKey">
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe6c7;</i></label>
+        <div class="formControls col-xs-8">
+          <input id="phone" name="phone" type="text" placeholder="手机号" class="input-text size-L" required>
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-xs-8">
+          <input id="password" name="password" type="password" placeholder="密码" class="input-text size-L" required>
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe6cb;</i></label>
+        <div class="formControls col-xs-8 ">
+          <input class="input-text size-L" type="text" name="captcha" placeholder="校验码" style="width:205px;" required>
+          <img src="{:captcha_src()}" alt="captcha" onclick="javascript:this.src='{:captcha_src()}?tm='+Math.random();" style="cursor: pointer"/></div>
+      </div>
+      <div class="row cl">
+        <div class="formControls col-xs-8 col-xs-offset-3">
+          <input name="" type="submit" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+          <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="footer">Copyright @ 2018-2019 www.ruixin.com all Rights Reserved 辽ICP备xxxxx号-x</div>
+{/block}
+
+{block name='js'}
+<script>
+
+    //登录
+    $(function(){
+        $(".form-horizontal").validate({
+            onkeyup:false,
+            focusCleanup:true,
+            success:"valid",
+            submitHandler:function(form){
+                $(form).ajaxSubmit({
+                    type: 'post',
+                    dataType: "json",
+                    url: "{:url('admin/Index/login')}",
+                    success: function(data){
+                        if(data.code == 2000){
+                            layer.msg(data.msg, {icon:1,time:1500}, function(){
+                                var jumpUrl = data.data.jumpUrl;
+                                location.href = jumpUrl;
+                            });
+                        }
+                        else {
+                            layer.msg(data.msg,{icon:2,time:1500});
+                        }
+                    }
+                });
+            }
+        });
+    });
+
+
+
+
+</script>
+{/block}
