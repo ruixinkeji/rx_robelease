@@ -12866,3 +12866,223 @@ create_time` DESC LIMIT 3 [ RunTime:0.001096s ]
 [2019-07-23T10:15:31+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/goods
 [运行时间：0.043720s] [吞吐率：22.87req/s] [内存消耗：1,690.76kb] [文件加载：78]
 [ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-07-23T10:26:29+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/goods
+[运行时间：0.024969s] [吞吐率：40.05req/s] [内存消耗：1,690.76kb] [文件加载：78]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-07-23T10:26:29+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/lists
+[运行时间：0.049004s] [吞吐率：20.41req/s] [内存消耗：3,121.84kb] [文件加载：98]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '<version>/category/lists',
+  'route' => 'api/Category/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'version' => 'v1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-real-ip' => '113.225.151.25',
+  'x-natapp-ip' => '113.225.151.25',
+  'sec-fetch-user' => '?F',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'https://servicewechat.com/wx60fc509b53c08301/devtools/page-frame.html',
+  'pragma' => 'no-cache',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1907160 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'ruixinec.natapp1.cc',
+)
+[ info ] [ PARAM ] array (
+  '/v1/category/lists' => '',
+  'version' => 'v1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011457s ] mysql:host=127.0.0.1;port=3306;dbname=rx_rodelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_category` [ RunTime:0.004158s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_category` WHERE  `category_parent_id` > 0  AND `category_status` = 1 [ RunTime:0.000362s ]
+---------------------------------------------------------------
+[2019-07-23T10:27:12+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/goods
+[运行时间：0.026938s] [吞吐率：37.12req/s] [内存消耗：1,690.76kb] [文件加载：78]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-07-23T10:27:12+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/lists
+[运行时间：0.034356s] [吞吐率：29.11req/s] [内存消耗：3,121.84kb] [文件加载：98]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '<version>/category/lists',
+  'route' => 'api/Category/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'version' => 'v1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-real-ip' => '113.225.151.25',
+  'x-natapp-ip' => '113.225.151.25',
+  'sec-fetch-user' => '?F',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'https://servicewechat.com/wx60fc509b53c08301/devtools/page-frame.html',
+  'pragma' => 'no-cache',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1907160 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'ruixinec.natapp1.cc',
+)
+[ info ] [ PARAM ] array (
+  '/v1/category/lists' => '',
+  'version' => 'v1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000975s ] mysql:host=127.0.0.1;port=3306;dbname=rx_rodelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_category` [ RunTime:0.004393s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_category` WHERE  `category_parent_id` > 0  AND `category_status` = 1 [ RunTime:0.000572s ]
+---------------------------------------------------------------
+[2019-07-23T10:27:13+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/goods
+[运行时间：0.019931s] [吞吐率：50.17req/s] [内存消耗：1,690.76kb] [文件加载：78]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-07-23T10:27:13+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/lists
+[运行时间：0.033554s] [吞吐率：29.80req/s] [内存消耗：3,121.84kb] [文件加载：98]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '<version>/category/lists',
+  'route' => 'api/Category/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'version' => 'v1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-real-ip' => '113.225.151.25',
+  'x-natapp-ip' => '113.225.151.25',
+  'sec-fetch-user' => '?F',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'https://servicewechat.com/wx60fc509b53c08301/devtools/page-frame.html',
+  'pragma' => 'no-cache',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1907160 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'ruixinec.natapp1.cc',
+)
+[ info ] [ PARAM ] array (
+  '/v1/category/lists' => '',
+  'version' => 'v1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000551s ] mysql:host=127.0.0.1;port=3306;dbname=rx_rodelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_category` [ RunTime:0.003982s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_category` WHERE  `category_parent_id` > 0  AND `category_status` = 1 [ RunTime:0.000280s ]
+---------------------------------------------------------------
+[2019-07-23T10:29:07+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/goods
+[运行时间：0.024559s] [吞吐率：40.72req/s] [内存消耗：1,690.76kb] [文件加载：78]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-07-23T10:29:07+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/lists
+[运行时间：0.050824s] [吞吐率：19.68req/s] [内存消耗：3,121.84kb] [文件加载：98]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '<version>/category/lists',
+  'route' => 'api/Category/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'version' => 'v1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-real-ip' => '113.225.151.25',
+  'x-natapp-ip' => '113.225.151.25',
+  'sec-fetch-user' => '?F',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'https://servicewechat.com/wx60fc509b53c08301/devtools/page-frame.html',
+  'pragma' => 'no-cache',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1907160 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'ruixinec.natapp1.cc',
+)
+[ info ] [ PARAM ] array (
+  '/v1/category/lists' => '',
+  'version' => 'v1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011346s ] mysql:host=127.0.0.1;port=3306;dbname=rx_rodelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_category` [ RunTime:0.004356s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_category` WHERE  `category_parent_id` > 0  AND `category_status` = 1 [ RunTime:0.000359s ]
+---------------------------------------------------------------
+[2019-07-23T10:34:16+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/goods
+[运行时间：0.033850s] [吞吐率：29.54req/s] [内存消耗：1,690.76kb] [文件加载：78]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-07-23T10:34:16+08:00] 127.0.0.1 GET ruixinec.natapp1.cc/v1/category/lists
+[运行时间：0.047755s] [吞吐率：20.94req/s] [内存消耗：3,121.84kb] [文件加载：98]
+[ info ] [ LANG ] D:\ruixin_project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '<version>/category/lists',
+  'route' => 'api/Category/lists',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'version' => 'v1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-real-ip' => '113.225.151.25',
+  'x-natapp-ip' => '113.225.151.25',
+  'sec-fetch-user' => '?F',
+  'sec-fetch-site' => 'cross-site',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'https://servicewechat.com/wx60fc509b53c08301/devtools/page-frame.html',
+  'pragma' => 'no-cache',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'cache-control' => 'no-cache',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1907160 MicroMessenger/7.0.4 Language/zh_CN webview/',
+  'host' => 'ruixinec.natapp1.cc',
+)
+[ info ] [ PARAM ] array (
+  '/v1/category/lists' => '',
+  'version' => 'v1',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011477s ] mysql:host=127.0.0.1;port=3306;dbname=rx_rodelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_category` [ RunTime:0.004169s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_category` WHERE  `category_parent_id` > 0  AND `category_status` = 1 [ RunTime:0.000356s ]
