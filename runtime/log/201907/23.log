@@ -21785,3 +21785,1313 @@ create_time` DESC LIMIT 3 [ RunTime:0.001096s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005001s ]
 [ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
 [ error ] [8]未定义数组索引: banner_name[D:\work\xampp\htdocs\project\rx_robelease\application\admin\controller\Imgtext.php:64]
+---------------------------------------------------------------
+[2019-07-23T16:20:37+08:00] ::1 GET localhost:8085/admin/index/index
+[运行时间：0.183010s] [吞吐率：5.46req/s] [内存消耗：3,411.67kb] [文件加载：109]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/index/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/index' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\index\index.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'menu',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_menu` `a` WHERE  `hide` = 0  AND `parent_id` = 0 ORDER BY `order_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_menu` `a` WHERE  `hide` = 0  AND `parent_id` = 1 ORDER BY `order_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_menu` `a` WHERE  `hide` = 0  AND `parent_id` = 3 ORDER BY `order_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_menu` `a` WHERE  `hide` = 0  AND `parent_id` = 4 ORDER BY `order_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_menu` `a` WHERE  `hide` = 0  AND `parent_id` = 6 ORDER BY `order_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_menu` `a` WHERE  `hide` = 0  AND `parent_id` = 12 ORDER BY `order_sort` ASC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:20:37+08:00] ::1 GET localhost:8085/admin/index/welcome.html
+[运行时间：0.167010s] [吞吐率：5.99req/s] [内存消耗：3,319.15kb] [文件加载：105]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/index/welcome_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\index\welcome.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'info',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015001s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:20:40+08:00] ::1 GET localhost:8085/admin/imgtext/aboutmy.html
+[运行时间：0.075004s] [吞吐率：13.33req/s] [内存消耗：3,367.69kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/aboutmy_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\merchant-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'merchant',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_merchant` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_merchant` LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:20:41+08:00] ::1 GET localhost:8085/admin/imgtext/banners.html
+[运行时间：0.079005s] [吞吐率：12.66req/s] [内存消耗：3,378.40kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/banners_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banners',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` `a` ORDER BY `banner_order_sort` DESC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:20:43+08:00] ::1 GET localhost:8085/admin/imgtext/editbanner.html?bannerId=1
+[运行时间：0.103005s] [吞吐率：9.71req/s] [内存消耗：3,620.17kb] [文件加载：110]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'bannerId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-edit.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banner',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` WHERE  `banner_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:20:46+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.064004s] [吞吐率：15.62req/s] [内存消耗：2,999.14kb] [文件加载：100]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '221',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播11',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述1</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: banner_cover[D:\work\xampp\htdocs\project\rx_robelease\application\admin\controller\Imgtext.php:68]
+---------------------------------------------------------------
+[2019-07-23T16:23:44+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.129007s] [吞吐率：7.75req/s] [内存消耗：2,999.14kb] [文件加载：100]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '221',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播11',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述1</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: banner_cover[D:\work\xampp\htdocs\project\rx_robelease\application\admin\controller\Imgtext.php:68]
+---------------------------------------------------------------
+[2019-07-23T16:25:20+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.060003s] [吞吐率：16.67req/s] [内存消耗：2,924.42kb] [文件加载：94]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '221',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播11',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述1</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:28:24+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.111006s] [吞吐率：9.01req/s] [内存消耗：2,925.16kb] [文件加载：94]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '221',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播11',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述1</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:32:00+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.108006s] [吞吐率：9.26req/s] [内存消耗：2,925.91kb] [文件加载：94]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '221',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播11',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述1</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:32:37+08:00] ::1 GET localhost:8085/admin/imgtext/banners.html
+[运行时间：0.092005s] [吞吐率：10.87req/s] [内存消耗：3,378.78kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/banners_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banners',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` `a` ORDER BY `banner_order_sort` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:32:40+08:00] ::1 GET localhost:8085/admin/imgtext/editbanner.html?bannerId=1
+[运行时间：0.089005s] [吞吐率：11.24req/s] [内存消耗：3,416.95kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'bannerId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-edit.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banner',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` WHERE  `banner_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:32:44+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.081005s] [吞吐率：12.34req/s] [内存消耗：3,294.82kb] [文件加载：107]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ error ] [0]数据表字段不存在:[0][D:\work\xampp\htdocs\project\rx_robelease\thinkphp\library\think\db\Builder.php:138]
+---------------------------------------------------------------
+[2019-07-23T16:32:50+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.090005s] [吞吐率：11.11req/s] [内存消耗：3,294.82kb] [文件加载：107]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.006000s ]
+[ error ] [0]数据表字段不存在:[0][D:\work\xampp\htdocs\project\rx_robelease\thinkphp\library\think\db\Builder.php:138]
+---------------------------------------------------------------
+[2019-07-23T16:33:54+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.075004s] [吞吐率：13.33req/s] [内存消耗：3,294.87kb] [文件加载：107]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005001s ]
+[ error ] [0]数据表字段不存在:[0][D:\work\xampp\htdocs\project\rx_robelease\thinkphp\library\think\db\Builder.php:138]
+---------------------------------------------------------------
+[2019-07-23T16:34:23+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.099005s] [吞吐率：10.10req/s] [内存消耗：2,923.35kb] [文件加载：93]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:34:56+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.083004s] [吞吐率：12.05req/s] [内存消耗：3,294.82kb] [文件加载：107]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ error ] [0]数据表字段不存在:[0][D:\work\xampp\htdocs\project\rx_robelease\thinkphp\library\think\db\Builder.php:138]
+---------------------------------------------------------------
+[2019-07-23T16:35:11+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.060003s] [吞吐率：16.67req/s] [内存消耗：2,923.02kb] [文件加载：93]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:36:09+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.068004s] [吞吐率：14.71req/s] [内存消耗：2,923.46kb] [文件加载：93]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[2019-07-23T16:36:56+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.113006s] [吞吐率：8.85req/s] [内存消耗：2,923.08kb] [文件加载：93]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:37:11+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.111006s] [吞吐率：9.01req/s] [内存消耗：3,294.82kb] [文件加载：107]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.007001s ]
+[ error ] [0]数据表字段不存在:[0][D:\work\xampp\htdocs\project\rx_robelease\thinkphp\library\think\db\Builder.php:138]
+---------------------------------------------------------------
+[2019-07-23T16:37:50+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.071004s] [吞吐率：14.08req/s] [内存消耗：2,923.08kb] [文件加载：93]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:15+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.113006s] [吞吐率：8.85req/s] [内存消耗：3,231.98kb] [文件加载：104]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '224',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `rx_banner`  SET `banner_name` = '轮播1' , `banner_url` = '' , `banner_order_sort` = 1 , `banner_describe` = '<p>我是轮播描述12222</p>' , `banner_cover` = 'https://lf.ruixinec.com/timg2.jpg'  WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:16+08:00] ::1 GET localhost:8085/admin/imgtext/banners.html
+[运行时间：0.107006s] [吞吐率：9.35req/s] [内存消耗：3,378.90kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/banners_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banners',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` `a` ORDER BY `banner_order_sort` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:23+08:00] ::1 GET localhost:8085/admin/imgtext/banners.html
+[运行时间：0.079005s] [吞吐率：12.66req/s] [内存消耗：3,378.81kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/banners_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banners',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` `a` ORDER BY `banner_order_sort` DESC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:26+08:00] ::1 GET localhost:8085/admin/imgtext/editbanner.html?bannerId=1
+[运行时间：0.104006s] [吞吐率：9.61req/s] [内存消耗：3,416.98kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'bannerId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-edit.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banner',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` WHERE  `banner_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:31+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.056004s] [吞吐率：17.86req/s] [内存消耗：2,961.92kb] [文件加载：96]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '183',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => '',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:46+08:00] ::1 GET localhost:8085/admin/imgtext/editbanner.html?bannerId=1
+[运行时间：0.085005s] [吞吐率：11.76req/s] [内存消耗：3,416.98kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'bannerId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-edit.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banner',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` WHERE  `banner_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:52+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.075005s] [吞吐率：13.33req/s] [内存消耗：3,232.04kb] [文件加载：104]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '236',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/timg2.jpg',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222xxxxxxxxxxxx</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `rx_banner`  SET `banner_name` = '轮播1' , `banner_url` = '' , `banner_order_sort` = 1 , `banner_describe` = '<p>我是轮播描述12222xxxxxxxxxxxx</p>' , `banner_cover` = 'https://lf.ruixinec.com/timg2.jpg'  WHERE  `banner_id` = 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:39:53+08:00] ::1 GET localhost:8085/admin/imgtext/banners.html
+[运行时间：0.079005s] [吞吐率：12.66req/s] [内存消耗：3,378.91kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/banners_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banners',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` `a` ORDER BY `banner_order_sort` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:40:34+08:00] ::1 GET localhost:8085/admin/imgtext/editbanner.html?bannerId=1
+[运行时间：0.083004s] [吞吐率：12.05req/s] [内存消耗：3,416.99kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'bannerId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-edit.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banner',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` WHERE  `banner_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:40:44+08:00] ::1 POST localhost:8085/admin/upload_img/ajaxuploadimg.html
+[运行时间：1.653095s] [吞吐率：0.60req/s] [内存消耗：2,110.01kb] [文件加载：95]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '45163',
+  'origin' => 'http://localhost:8085',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryWS8STpxuuoD0pmUT',
+  'accept' => '*/*',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload_img/ajaxuploadimg_html' => '',
+  'uid' => '123',
+  'id' => 'WU_FILE_1',
+  'name' => 'xx.jpg',
+  'type' => 'image/jpeg',
+  'lastModifiedDate' => 'Tue Jul 23 2019 16:40:24 GMT+0800 (中国标准时间)',
+  'size' => '44341',
+)
+---------------------------------------------------------------
+[2019-07-23T16:40:49+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.063003s] [吞吐率：15.87req/s] [内存消耗：3,232.23kb] [文件加载：104]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '263',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/267275625a4e1a6a5b2072a6011d3e6d.png',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222xxxxxxxxxxxx</p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] UPDATE `rx_banner`  SET `banner_name` = '轮播1' , `banner_url` = '' , `banner_order_sort` = 1 , `banner_describe` = '<p>我是轮播描述12222xxxxxxxxxxxx</p>' , `banner_cover` = 'https://lf.ruixinec.com/267275625a4e1a6a5b2072a6011d3e6d.png'  WHERE  `banner_id` = 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-07-23T16:40:50+08:00] ::1 GET localhost:8085/admin/imgtext/banners.html
+[运行时间：0.079005s] [吞吐率：12.66req/s] [内存消耗：3,378.94kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/banners_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banners',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` `a` ORDER BY `banner_order_sort` DESC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:40:53+08:00] ::1 GET localhost:8085/admin/imgtext/editbanner.html?bannerId=1
+[运行时间：0.090005s] [吞吐率：11.11req/s] [内存消耗：3,417.02kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'bannerId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-edit.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banner',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` WHERE  `banner_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:41:06+08:00] ::1 POST localhost:8085/admin/upload_img/addueditorpictureqiniu.html?
+[运行时间：1.542088s] [吞吐率：0.65req/s] [内存消耗：2,109.52kb] [文件加载：95]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '37634',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'null',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryr39MB3BxvjKQO6bX',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/upload_img/addueditorpictureqiniu_html' => '',
+)
+---------------------------------------------------------------
+[2019-07-23T16:41:36+08:00] ::1 POST localhost:8085/admin/imgtext/editbanner.html
+[运行时间：0.149008s] [吞吐率：6.71req/s] [内存消耗：3,233.35kb] [文件加载：104]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'content-length' => '493',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8085',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8085/admin/imgtext/editbanner.html?bannerId=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'imgUrl' => 'https://lf.ruixinec.com/267275625a4e1a6a5b2072a6011d3e6d.png',
+  'bannerId' => '1',
+  'banner_name' => '轮播1',
+  'banner_url' => '',
+  'banner_order_sort' => '1',
+  'file' => '',
+  'editorValue' => '<p>我是轮播描述12222xxxxxxxxxxxx</p><p><img src="https://lf.ruixinec.com/ed0c07015d4e1c084be9085b80904238.png" title="" alt=""/></p><p><img src="http://img.baidu.com/hi/jx2/j_0004.gif"/></p>',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.033002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] UPDATE `rx_banner`  SET `banner_name` = '轮播1' , `banner_url` = '' , `banner_order_sort` = 1 , `banner_describe` = '<p>我是轮播描述12222xxxxxxxxxxxx</p><p><img src=\"https://lf.ruixinec.com/ed0c07015d4e1c084be9085b80904238.png\" title=\"\" alt=\"\"/></p><p><img src=\"http://img.baidu.com/hi/jx2/j_0004.gif\"/></p>' , `banner_cover` = 'https://lf.ruixinec.com/267275625a4e1a6a5b2072a6011d3e6d.png'  WHERE  `banner_id` = 1 [ RunTime:0.012000s ]
+---------------------------------------------------------------
+[2019-07-23T16:41:38+08:00] ::1 GET localhost:8085/admin/imgtext/banners.html
+[运行时间：0.096005s] [吞吐率：10.42req/s] [内存消耗：3,379.09kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/banners_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-list.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banners',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` `a` ORDER BY `banner_order_sort` DESC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-07-23T16:41:40+08:00] ::1 GET localhost:8085/admin/imgtext/editbanner.html?bannerId=1
+[运行时间：0.082005s] [吞吐率：12.19req/s] [内存消耗：3,417.17kb] [文件加载：108]
+[ info ] [ LANG ] D:\work\xampp\htdocs\project\rx_robelease\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8085',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'referer' => 'http://localhost:8085/admin/imgtext/banners.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=bair6bdhv8p4hfcauls4vdiigj; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '/admin/imgtext/editbanner_html' => '',
+  'bannerId' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\work\xampp\htdocs\project\rx_robelease\application\admin\view\imgtext\banner-edit.html [ array (
+  0 => 'request',
+  1 => 'param',
+  2 => 'title',
+  3 => 'banner',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=rx_robelease;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_user_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_user_role` WHERE  `user_id` = 1  AND `role_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rx_banner` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `rx_banner` WHERE  `banner_id` = 1 LIMIT 1 [ RunTime:0.001000s ]

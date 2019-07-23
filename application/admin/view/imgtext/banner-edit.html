@@ -15,25 +15,25 @@
 <div class="page-container">
 	<form class="form form-horizontal" id="form-article-add">
 		<input type="hidden" id="imgUrl" name="imgUrl" value="{$banner['banner_cover']}"/>
-		<input type="hidden" id="banner_describe" name="banner_describe" value="{$banner['banner_describe']}"/>
+		<input type="hidden" id="banner_describe" name="" value="{$banner['banner_describe']}"/>
 		<input type="hidden" id="" name="bannerId" value="{$banner['banner_id']}"/>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>轮播名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="{$banner['banner_name']}" placeholder="" id="" name="bannerName">
+				<input type="text" class="input-text" value="{$banner['banner_name']}" placeholder="" id="" name="banner_name">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">指向跳转的URL：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="{$banner['banner_url']}" placeholder="轮播跳转内容页面URL" id="" name="url">
+				<input type="text" class="input-text" value="{$banner['banner_url']}" placeholder="轮播跳转内容页面URL" id="" name="banner_url">
 			</div>
 		</div>
 
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">排序值：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="{$banner['banner_order_sort']}" placeholder="" id="" name="sort">
+				<input type="text" class="input-text" value="{$banner['banner_order_sort']}" placeholder="" id="" name="banner_order_sort">
 			</div>
 		</div>
 
