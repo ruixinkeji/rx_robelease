@@ -1,4 +1,4 @@
-<?php /*a:4:{s:78:"D:\ruixin_project\rx_robelease\application\admin\view\imgtext\banner-edit.html";i:1563869738;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\base.html";i:1563238307;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\meta.html";i:1563238307;s:72:"D:\ruixin_project\rx_robelease\application\admin\view\public\footer.html";i:1563330416;}*/ ?>
+<?php /*a:4:{s:78:"D:\ruixin_project\rx_robelease\application\admin\view\imgtext\banner-edit.html";i:1563872132;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\base.html";i:1563238307;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\meta.html";i:1563238307;s:72:"D:\ruixin_project\rx_robelease\application\admin\view\public\footer.html";i:1563330416;}*/ ?>
 <!--引入html顶部meta和引用的css...-->
 <!DOCTYPE HTML>
 <html>
@@ -66,25 +66,25 @@
 <div class="page-container">
 	<form class="form form-horizontal" id="form-article-add">
 		<input type="hidden" id="imgUrl" name="imgUrl" value="<?php echo htmlentities($banner['banner_cover']); ?>"/>
-		<input type="hidden" id="banner_describe" name="banner_describe" value="<?php echo htmlentities($banner['banner_describe']); ?>"/>
+		<input type="hidden" id="banner_describe" name="" value="<?php echo htmlentities($banner['banner_describe']); ?>"/>
 		<input type="hidden" id="" name="bannerId" value="<?php echo htmlentities($banner['banner_id']); ?>"/>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>轮播名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo htmlentities($banner['banner_name']); ?>" placeholder="" id="" name="bannerName">
+				<input type="text" class="input-text" value="<?php echo htmlentities($banner['banner_name']); ?>" placeholder="" id="" name="banner_name">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">指向跳转的URL：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo htmlentities($banner['banner_url']); ?>" placeholder="轮播跳转内容页面URL" id="" name="url">
+				<input type="text" class="input-text" value="<?php echo htmlentities($banner['banner_url']); ?>" placeholder="轮播跳转内容页面URL" id="" name="banner_url">
 			</div>
 		</div>
 
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">排序值：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo htmlentities($banner['banner_order_sort']); ?>" placeholder="" id="" name="sort">
+				<input type="text" class="input-text" value="<?php echo htmlentities($banner['banner_order_sort']); ?>" placeholder="" id="" name="banner_order_sort">
 			</div>
 		</div>
 

@@ -11,6 +11,7 @@ namespace app\admin\controller;
 use app\common\controller\AdminController;
 use app\common\facade\BannerModel;
 use app\common\facade\MerchantModel;
+use think\facade\Request;
 
 class Imgtext extends AdminController
 {
@@ -59,7 +60,22 @@ class Imgtext extends AdminController
             $banner['banner_cover'] = json_encode([$banner['banner_cover']]);
         }
         if(IS_POST){
-            $params = $this->param;
+            $params =Request::except('/admin/imgtext/editbanner_html,file');
+            $imgUrl = $params['imgUrl'];
+            if($imgUrl == "" || $imgUrl == null){
+                return format_result("轮播封面必须传！",2001);
+            }
+            $editorValue = $params['editorValue'];
+            unset($params['editorValue']);
+            unset($params['imgUrl']);
+            unset($params['bannerId']);
+            $params['banner_describe'] = $editorValue;
+            $params['banner_cover'] = $imgUrl;
+            $res = BannerModel::updateBanner($params,$bannerId);
+            if($res>0){
+                return format_success_result();
+            }
+            return format_result("修改失败！",2001);
         }
         return view('banner-edit',['banner'=>$banner]);
     }
