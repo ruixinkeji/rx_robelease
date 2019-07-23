@@ -1,4 +1,4 @@
-<?php /*a:4:{s:78:"D:\ruixin_project\rx_robelease\application\admin\view\imgtext\banner-edit.html";i:1563530546;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\base.html";i:1563238307;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\meta.html";i:1563238307;s:72:"D:\ruixin_project\rx_robelease\application\admin\view\public\footer.html";i:1563330416;}*/ ?>
+<?php /*a:4:{s:78:"D:\ruixin_project\rx_robelease\application\admin\view\imgtext\banner-edit.html";i:1563869738;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\base.html";i:1563238307;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\meta.html";i:1563238307;s:72:"D:\ruixin_project\rx_robelease\application\admin\view\public\footer.html";i:1563330416;}*/ ?>
 <!--引入html顶部meta和引用的css...-->
 <!DOCTYPE HTML>
 <html>
@@ -190,9 +190,7 @@
     //表单验证
     $("#form-article-add").validate({
         rules:{
-            bannerName:{
-                required:true,
-            }
+
         },
         onkeyup:false,
         focusCleanup:true,

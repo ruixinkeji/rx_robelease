@@ -1,4 +1,4 @@
-<?php /*a:4:{s:74:"D:\ruixin_project\rx_robelease\application\admin\view\goods\goods-add.html";i:1563773686;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\base.html";i:1563238307;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\meta.html";i:1563238307;s:72:"D:\ruixin_project\rx_robelease\application\admin\view\public\footer.html";i:1563330416;}*/ ?>
+<?php /*a:4:{s:74:"D:\ruixin_project\rx_robelease\application\admin\view\goods\goods-add.html";i:1563776085;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\base.html";i:1563238307;s:70:"D:\ruixin_project\rx_robelease\application\admin\view\public\meta.html";i:1563238307;s:72:"D:\ruixin_project\rx_robelease\application\admin\view\public\footer.html";i:1563330416;}*/ ?>
 <!--引入html顶部meta和引用的css...-->
 <!DOCTYPE HTML>
 <html>
@@ -121,7 +121,7 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">租赁时间：</label>
+			<label class="form-label col-xs-4 col-sm-2">最大租赁时间：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="number" class="input-text" value="1" placeholder="" id="" name="goods_lease_time">
 				<span style="color: red">注意：只能填写天数</span>

@@ -60,7 +60,6 @@ class Imgtext extends AdminController
         }
         if(IS_POST){
             $params = $this->param;
-
         }
         return view('banner-edit',['banner'=>$banner]);
     }
