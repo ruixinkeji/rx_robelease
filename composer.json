@@ -25,7 +25,8 @@
         "overtrue/wechat": "~4.0",
         "psr/simple-cache": "^1.0",
         "qiniu/php-sdk": "^7.2",
-        "phpoffice/phpspreadsheet": "^1.5"
+        "phpoffice/phpspreadsheet": "^1.5",
+        "endroid/qr-code": "^3.6"
     },
     "autoload": {
         "psr-4": {

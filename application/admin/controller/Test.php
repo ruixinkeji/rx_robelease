@@ -8,8 +8,10 @@
 
 namespace app\admin\controller;
 
+use Endroid\QrCode\QrCode;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use think\facade\Log;
 
 class Test
 {
@@ -66,5 +68,33 @@ class Test
         //$writer->save('php://output');
     }
 
+    public function test()
+    {
+        $code = rand(1,10);
+        // Create a basic QR code
+        $qrCode = new QrCode("http://ruixinec.natapp1.cc/admin/Test/test2?code=".$code);
+        $qrCode->setSize(300);
+        // Set advanced options
+        $qrCode->setWriterByName('png');
+        $qrCode->setMargin(10);
+        $qrCode->setEncoding('UTF-8');
+        $qrCode->setForegroundColor(['r' => 0, 'g' => 0, 'b' => 0, 'a' => 0]);
+        $qrCode->setBackgroundColor(['r' => 255, 'g' => 255, 'b' => 255, 'a' => 0]);
+        $qrCode->setRoundBlockSize(true);
+        $qrCode->setValidateResult(false);
+        $qrCode->setWriterOptions(['exclude_xml_declaration' => true]);
+        $qrCode ->writeFile( __DIR__ .'/qrcode.png');
+    }
+
+    public function test1(){
+        $code = input("code");
+        echo "成功";
+        Log::info("我是二维码回调 = ".$code);
+    }
+
+    public function test2(){
+        $code = input("code");
+        return view("test2",['code'=>$code]);
+    }
 
 }

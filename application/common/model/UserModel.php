@@ -29,7 +29,7 @@ class UserModel extends Model
         $apps = EasyWeChatUtil::getApplet();
         $decryptedData = $apps->encryptor->decryptData($sessionKey, $iv, $encryptedData);
         $openId = $decryptedData['openId'];
-        $unionId = $decryptedData['unionId'];
+//        $unionId = $decryptedData['unionId'];
         $user =Sql::_find("users",['user_openid'=>$openId]);
         $token_key = config('jwt')['key'];
         if ($user == null) {
@@ -40,7 +40,7 @@ class UserModel extends Model
                 'user_sex' => $decryptedData['gender'],
                 'user_avatar' => $decryptedData['avatarUrl'],
                 'user_create_time' => time(),
-                'user_unitionid' => $unionId
+//                'user_unitionid' => $unionId
             );
             $userId = Sql::_save("users",$userInsertData);
             $userInfoInsertData = array(
