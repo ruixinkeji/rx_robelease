@@ -16,6 +16,7 @@ use app\common\facade\OrderShippingModel;
 use app\common\facade\UserModel;
 use app\common\utils\EasyWeChatUtil;
 use app\common\utils\OrderNumberUtil;
+use think\Exception;
 use think\facade\Response;
 
 class Goods extends ApiController
@@ -154,70 +155,76 @@ class Goods extends ApiController
     public function advanceOrder()
     {
         $params = $this->param;
-        $userId = /*$this->getTokenUserId()*/1;//用户id
-        $goodsId = $params['goodsId'];//商品id
-        $quantity = $params['quantity'];//数量
-        $leaseTime = $params['leaseTime'];//租赁时间（天数）
-        $postFee = $params['postFee'];//邮费
-        $paymentType = $params['paymentType'];//交易类型
-        $buyerMessage = $params['buyerMessage'];//买家留言
-        $receiverName = $params['receiverName'];//收货人的真实姓名
-        $receiverPhone = $params['receiverPhone'];//收货人固定电话
-        $receiverMobile = $params['receiverMobile'];//收货人的移动电话
-        $receiverState = $params['receiverState'];//收货人所在的省
-        $receiverCity = $params['receiverCity'];//收货人所在的市
-        $receiverDistrict = $params['receiverDistrict'];//收货人所在的区
-        $receiverAddress = $params['receiverAddress'];//收货人详细地址
-        $receiverZip = $params['receiverZip'];//收货人邮编
+        $userId = $this->getTokenUserId();//用户id
+        try {
+            $goodsId = $params['goodsId'];//商品id
+            $quantity = $params['quantity'];//数量
+            $leaseTime = $params['leaseTime'];//租赁时间（天数）
+            $postFee = $params['postFee'];//邮费
+            $paymentType = $params['paymentType'];//交易类型
+            $buyerMessage = $params['buyerMessage'];//买家留言
+            $receiverName = $params['receiverName'];//收货人的真实姓名
+            $receiverPhone = $params['receiverPhone'];//收货人固定电话
+            $receiverMobile = $params['receiverMobile'];//收货人的移动电话
+            $receiverState = $params['receiverState'];//收货人所在的省
+            $receiverCity = $params['receiverCity'];//收货人所在的市
+            $receiverDistrict = $params['receiverDistrict'];//收货人所在的区
+            $receiverAddress = $params['receiverAddress'];//收货人详细地址
+            $receiverZip = $params['receiverZip'];//收货人邮编
+        } catch (Exception $e) {
+            $em = $e->getMessage();
+            return format_result($em, 2001);
+        }
         $goods = GoodsModel::getGoodsById($goodsId);//购买的商品
         $goods_num = $goods['goods_num'];
         $lease_time = $goods['goods_lease_time'];//商家限定租赁时间
         if ($quantity > $goods_num) return format_result("商品数量不足！", 2001);
-        if ($leaseTime > $lease_time) return format_result("超出商家限定最大租赁时间",2001);
+        if ($leaseTime > $lease_time) return format_result("超出商家限定最大租赁时间", 2001);
         $price = $goods['goods_current_price'];//商品单价
-        $totalPrice = ($price * $quantity) * $leaseTime;//商品总价格
+        $totalPrice = ($price * $quantity) * $leaseTime + (double)$postFee;//商品总价格
         $paymentPlatformOrderNumber = OrderNumberUtil::getOrderNumber();//支付平台订单号
         $ownPlatformOrderNumber = OrderNumberUtil::getOrderNumber();//自身平台订单号
         //订单信息表
         $orderData = array(
-            'order_payment'=>$totalPrice,
-            'order_payment_type'=>$paymentType,
-            'order_post_fee'=>$postFee,
-            'order_status'=>0,
-            'order_create_time'=>time(),
-            'order_update_time'=>time(),
-            'order_platform_number'=>$ownPlatformOrderNumber,
-            'order_payment_number'=>$paymentPlatformOrderNumber,
-            'order_user_id'=>$userId,
-            'order_buyer_message'=>$buyerMessage
+            'order_payment' => $totalPrice,
+            'order_payment_type' => $paymentType,
+            'order_post_fee' => $postFee,
+            'order_status' => 0,
+            'order_create_time' => time(),
+            'order_update_time' => time(),
+            'order_platform_number' => $ownPlatformOrderNumber,
+            'order_payment_number' => $paymentPlatformOrderNumber,
+            'order_user_id' => $userId,
+            'order_buyer_message' => $buyerMessage
         );
         //添加订单信息表
         $orderId = OrderModel::addOrder($orderData);
         //订单商品详情表
         $orderGoodsInfo = array(
-            'order_item_goods_id'=>$goodsId,
-            'order_item_order_id'=>$orderId,
-            'order_item_num'=>$quantity,
-            'order_item_name'=>$goods['goods_name'],
-            'order_item_price'=>$price,
-            'order_item_total_fee'=>$totalPrice,
-            'order_item_pic_path'=>$goods['goods_cover']
+            'order_item_goods_id' => $goodsId,
+            'order_item_order_id' => $orderId,
+            'order_item_num' => $quantity,
+            'order_item_name' => $goods['goods_name'],
+            'order_item_price' => $price,
+            'order_item_total_fee' => $totalPrice,
+            'order_item_pic_path' => $goods['goods_cover'],
+            'order_item_lease_time' =>$leaseTime
         );
         //添加订单商品详情表
         $orderItemId = OrderItemModel::addOrderItem($orderGoodsInfo);
         //订单配送信息表
         $orderShipping = array(
-            'order_shipping_order_id'=>$orderId,
-            'order_shipping_receiver_name'=>$receiverName,
-            'order_shipping_receiver_phone'=>$receiverPhone,
-            'order_shipping_receiver_mobile'=>$receiverMobile,
-            'order_shipping_receiver_state'=>$receiverState,
-            'order_shipping_receiver_city'=>$receiverCity,
-            'order_shipping_receiver_district'=>$receiverDistrict,
-            'order_shipping_receiver_address'=>$receiverAddress,
-            'order_shipping_receiver_zip'=>$receiverZip,
-            'order_shipping_create_time'=>time(),
-            'order_shipping_update_time'=>time()
+            'order_shipping_order_id' => $orderId,
+            'order_shipping_receiver_name' => $receiverName,
+            'order_shipping_receiver_phone' => $receiverPhone,
+            'order_shipping_receiver_mobile' => $receiverMobile,
+            'order_shipping_receiver_state' => $receiverState,
+            'order_shipping_receiver_city' => $receiverCity,
+            'order_shipping_receiver_district' => $receiverDistrict,
+            'order_shipping_receiver_address' => $receiverAddress,
+            'order_shipping_receiver_zip' => $receiverZip,
+            'order_shipping_create_time' => time(),
+            'order_shipping_update_time' => time()
         );
         //添加订单配送信息表
         $orderShippingId = OrderShippingModel::addOrderShipping($orderShipping);
@@ -231,13 +238,13 @@ class Goods extends ApiController
         $result = $payment->order->unify([
             'body' => "$goodsName",//商品名称
             'out_trade_no' => $paymentPlatformOrderNumber,//订单号
-            'total_fee' => /*$wxTotalPrice*/1,//总价  单位：分
-            'notify_url' => 'http://ruixinec.natapp1.cc/v1/goods/advanceOrderNotifyUrl', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+            'total_fee' => /*$wxTotalPrice*/
+                1,//总价  单位：分
+            'notify_url' => config('NOTIFY_URL') . 'goods/advanceOrderNotifyUrl', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'trade_type' => 'JSAPI', // 请对应换成你的支付方式对应的值类型
             'openid' => "$openId",  //小程序openId
             'attach' => ''   //自定义参数
         ]);
-        alert($result);
         if ($result['return_code'] == 'SUCCESS' && $result['result_code'] == 'SUCCESS') {
             $jssdk = $payment->jssdk;
             $prepayId = $result['prepay_id'];
@@ -245,12 +252,13 @@ class Goods extends ApiController
             $codes['data'] = $json;
             return format_success_result($codes);
         }
-        return format_result("支付请求错误！",2001);
+        return format_result("支付请求错误！", 2001);
     }
 
 
     //支付成功回调处理
-    public function advanceOrderNotifyUrl(){
+    public function advanceOrderNotifyUrl()
+    {
         $data = file_get_contents("php://input");
         $objArr = (array)simplexml_load_string($data, 'SimpleXMLElement', LIBXML_NOCDATA);
         if ($objArr['result_code'] != 'SUCCESS' || $objArr['return_code'] != 'SUCCESS') {
@@ -261,9 +269,201 @@ class Goods extends ApiController
         //得到回调数据中的支付平台订单号out_trade_no
         $outTradeNo = $objArr['out_trade_no'];
 
+        //1.修改订单状态（变为已支付）
+
+        //2.修改库存
 
 
     }
+
+
+    /**
+     * @api {POST} /cartAdvanceOrder 购物车商品下预订单
+     * @apiGroup goods
+     * @apiVersion 0.0.1
+     * @apiDescription 购物车商品下预订单
+     * @apiParam {String} Token 请求头中token
+     * @apiParam {int} goodsIds 商品id号数组（注意：购物车商品传递商品id号数组一件购物车商品也是数组，json传入）
+     * @apiParam {int} leaseTime 租赁时间（天数）
+     * @apiParam {int} postFee 邮费
+     * @apiParam {int} paymentType 交易类型（1：线上支付，2：线下自提）
+     * @apiParam {String} buyerMessage 买家留言
+     * @apiParam {String} receiverName 收货人真实姓名
+     * @apiParam {String} receiverPhone 收货人固定电话
+     * @apiParam {String} receiverMobile 收货人移动电话
+     * @apiParam {String} receiverState 收货人所在省
+     * @apiParam {String} receiverCity 收货人所在市
+     * @apiParam {String} receiverDistrict 收货人所在区
+     * @apiParam {String} receiverAddress 收货人所在详细地址
+     * @apiParam {String} receiverZip 收货人邮编
+     * @apiParamExample {json} 请求样例：
+     *                goods/cartAdvanceOrder?
+     * @apiSuccess (2000) {String} message 信息
+     * @apiSuccess (2000) {int} code 2000 代表无错误  其他代表有错误
+     * @apiSuccessExample {json} 返回样例:
+     *                {
+     * "code": 2000,
+     * "message": "成功",
+     * "data": {
+     * "session_key": "SdI/9k9sVQbHcFeegQmlHA==",
+     * "openid": "oihuL5UJ9IFoEpwkooTBtBNXlFLM"
+     * }
+     * }
+     */
+    public function cartAdvanceOrder()
+    {
+        $params = $this->param;
+        $userId = $this->getTokenUserId();//用户id
+        try {
+            $goodsIds = $params['goodsIds'];//商品ids json
+            $goodsIdsArr = json_decode($goodsIds, true);//商品id数组
+            $leaseTime = $params['leaseTime'];//租赁时间（天数）
+            $postFee = $params['postFee'];//邮费
+            $paymentType = $params['paymentType'];//交易类型
+            $buyerMessage = $params['buyerMessage'];//买家留言
+            $receiverName = $params['receiverName'];//收货人的真实姓名
+            $receiverPhone = $params['receiverPhone'];//收货人固定电话
+            $receiverMobile = $params['receiverMobile'];//收货人的移动电话
+            $receiverState = $params['receiverState'];//收货人所在的省
+            $receiverCity = $params['receiverCity'];//收货人所在的市
+            $receiverDistrict = $params['receiverDistrict'];//收货人所在的区
+            $receiverAddress = $params['receiverAddress'];//收货人详细地址
+            $receiverZip = $params['receiverZip'];//收货人邮编
+        } catch (Exception $e) {
+            $em = $e->getMessage();
+            return format_result($em, 2001);
+        }
+        $redis = get_redis_client();
+        //购物车中的全部商品
+        $cartGoods = $redis->get(config("CART_KEY") . $userId);
+        $buyGoods = [];
+        $totalPrice = 0;//订单商品总价
+        //判断商品数量
+        foreach ($goodsIdsArr as $goodsId) {
+            $goods = GoodsModel::getGoodsById($goodsId);//购买的商品
+            $goods_num = $goods['goods_num'];//数据库中商品实际数量
+            $lease_time = $goods['goods_lease_time'];//商家限定租赁时间
+            $price = $goods['goods_current_price'];//商品单价
+            $userCartArr = json_decode($cartGoods, true);
+            $quantity = 0;
+            foreach ($userCartArr as $value) {
+                if ($value['goodsId'] == $goodsId) {
+                    //比较商品的数量是否足够
+                    if ($goods_num < $value['total']) {
+                        return format_result("商品数量不足！", 2001);
+                    }
+                    $quantity = $value['total'];
+                }
+            }
+            if ($lease_time < $leaseTime) {
+                return format_result("超出商家限定最大租赁时间", 2001);
+            }
+            $totalPrice += ($price * $quantity) * $leaseTime;//商品总价格
+            array_push($buyGoods, $goods);
+        }
+        //计算商品总价格
+        $totalPrice += (double)$postFee;
+        $paymentPlatformOrderNumber = OrderNumberUtil::getOrderNumber();//支付平台订单号
+        $ownPlatformOrderNumber = OrderNumberUtil::getOrderNumber();//自身平台订单号
+        //订单信息表
+        $orderData = array(
+            'order_payment' => $totalPrice,
+            'order_payment_type' => $paymentType,
+            'order_post_fee' => $postFee,
+            'order_status' => 0,
+            'order_create_time' => time(),
+            'order_update_time' => time(),
+            'order_platform_number' => $ownPlatformOrderNumber,
+            'order_payment_number' => $paymentPlatformOrderNumber,
+            'order_user_id' => $userId,
+            'order_buyer_message' => $buyerMessage
+        );
+        //添加订单信息表
+        $orderId = OrderModel::addOrder($orderData);
+        foreach ($goodsIdsArr as $goodsId) {
+            $goods = GoodsModel::getGoodsById($goodsId);//购买的商品
+            $price = $goods['goods_current_price'];//商品单价
+            $quantity = 0;
+            foreach ($userCartArr as $value) {
+                if ($value['goodsId'] == $goodsId) {
+                    $quantity = $value['total'];
+                }
+            }
+            //订单商品详情表
+            $orderGoodsInfo = array(
+                'order_item_goods_id' => $goodsId,
+                'order_item_order_id' => $orderId,
+                'order_item_num' => $quantity,
+                'order_item_name' => $goods['goods_name'],
+                'order_item_price' => $price,
+                'order_item_total_fee' => ($price * $quantity) * $leaseTime,
+                'order_item_pic_path' => $goods['goods_cover'],
+                'order_item_lease_time' =>$leaseTime
+            );
+            //添加订单商品详情表
+            $orderItemId = OrderItemModel::addOrderItem($orderGoodsInfo);
+        }
+        //订单配送信息表
+        $orderShipping = array(
+            'order_shipping_order_id' => $orderId,
+            'order_shipping_receiver_name' => $receiverName,
+            'order_shipping_receiver_phone' => $receiverPhone,
+            'order_shipping_receiver_mobile' => $receiverMobile,
+            'order_shipping_receiver_state' => $receiverState,
+            'order_shipping_receiver_city' => $receiverCity,
+            'order_shipping_receiver_district' => $receiverDistrict,
+            'order_shipping_receiver_address' => $receiverAddress,
+            'order_shipping_receiver_zip' => $receiverZip,
+            'order_shipping_create_time' => time(),
+            'order_shipping_update_time' => time()
+        );
+        //添加订单配送信息表
+        $orderShippingId = OrderShippingModel::addOrderShipping($orderShipping);
+        //获取支付对象
+        $payment = EasyWeChatUtil::getPayMentObject();
+        //把订单对象order(订单号,金额）以参数传入
+        //拼接商品信息字符串
+        $strGoodsInfo = "";
+        foreach ($goodsIdsArr as $goodsId){
+            $goods = GoodsModel::getGoodsById($goodsId);//购买的商品
+            $goodsName = $goods['goods_name'];
+            $quantity = 0;
+            foreach ($userCartArr as $value) {
+                if ($value['goodsId'] == $goodsId) {
+                    $quantity = $value['total'];
+                }
+            }
+            $strGoodsInfo .= "商品："."$goodsName".":数量："."$quantity".";";
+        }
+        alert($totalPrice);
+        $user = UserModel::getUserById($userId);
+        $wxTotalPrice = $totalPrice * 100;
+        $openId = $user['user_openid'];
+        $result = $payment->order->unify([
+            'body' => "$strGoodsInfo",//商品名称
+            'out_trade_no' => $paymentPlatformOrderNumber,//订单号
+            'total_fee' => /*$wxTotalPrice*/
+                1,//总价  单位：分
+            'notify_url' => config('NOTIFY_URL') . 'goods/cartAdvanceOrderNotifyUrl', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+            'trade_type' => 'JSAPI', // 请对应换成你的支付方式对应的值类型
+            'openid' => "$openId",  //小程序openId
+            'attach' => ''   //自定义参数
+        ]);
+        if ($result['return_code'] == 'SUCCESS' && $result['result_code'] == 'SUCCESS') {
+            $jssdk = $payment->jssdk;
+            $prepayId = $result['prepay_id'];
+            $json = $jssdk->bridgeConfig($prepayId, false);
+            $codes['data'] = $json;
+            return format_success_result($codes);
+        }
+        return format_result("支付请求错误！", 2001);
+    }
+
+    //购物车结算商品支付成功回调
+    public function cartAdvanceOrderNotifyUrl(){
+
+    }
+
 
 
 }

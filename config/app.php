@@ -176,7 +176,9 @@ return [
         'domain' => 'https://lf.ruixinec.com/',
     ],
 
-    'CART_KEY'=>'USER_CART_',
+    'CART_KEY'=>'USER_CART_',//购物车redis的key关键字
+
+    'NOTIFY_URL'=>'http://ruixinec.natapp1.cc/v1/',//设置微信支付回调地址
 
 
 

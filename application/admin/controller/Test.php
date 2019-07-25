@@ -11,6 +11,8 @@ namespace app\admin\controller;
 use Endroid\QrCode\QrCode;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use think\Db;
+use think\Exception;
 use think\facade\Log;
 
 class Test
@@ -70,9 +72,9 @@ class Test
 
     public function test()
     {
-        $code = rand(1,10);
+        $code = rand(1, 10);
         // Create a basic QR code
-        $qrCode = new QrCode("http://ruixinec.natapp1.cc/admin/Test/test2?code=".$code);
+        $qrCode = new QrCode("http://ruixinec.natapp1.cc/admin/Test/test2?code=" . $code);
         $qrCode->setSize(300);
         // Set advanced options
         $qrCode->setWriterByName('png');
@@ -83,18 +85,101 @@ class Test
         $qrCode->setRoundBlockSize(true);
         $qrCode->setValidateResult(false);
         $qrCode->setWriterOptions(['exclude_xml_declaration' => true]);
-        $qrCode ->writeFile( __DIR__ .'/qrcode.png');
+        $qrCode->writeFile(__DIR__ . '/qrcode.png');
     }
 
-    public function test1(){
+    public function test1()
+    {
         $code = input("code");
         echo "成功";
-        Log::info("我是二维码回调 = ".$code);
+        Log::info("我是二维码回调 = " . $code);
     }
 
-    public function test2(){
+    public function test2()
+    {
         $code = input("code");
-        return view("test2",['code'=>$code]);
+        return view("test2", ['code' => $code]);
     }
+
+    public function like()
+    {
+        $res = Search::search("users", "Liaoning",
+            ["user_status" => 1], ["a.user_nickname", "a.user_create_time", "b.userinfo_provice"],
+            ["user_info b", "b.userinfo_user_id = a.user_id"], Search::LEFT);
+        alert($res);
+    }
+
+
+}
+
+class Search
+{
+    const INNER = 1;
+    const LEFT = 2;
+    const RIGHT = 3;
+
+    /**
+     * @param $tableName 数据表名称
+     * @param $value 搜索的数据
+     * @param $condition 条件
+     * @param $likeField 要模糊查询的字段
+     * @param $join 联合查询的表 ['user_info b', 'a.user_id=b.user_inf_user_id'],
+     * @param $type 联合查询类型 INNER  LEFT  RIGHT
+     */
+    public static function search($tableName, $value, $condition = [],
+                                  $likeField = [], $join = [], $type = Search::INNER)
+    {
+        if (empty($tableName)) {
+            throw new  Exception("主表名称不存在！");
+        }
+        if (empty($likeField)) {
+            throw new Exception("需要模糊的字段为空！");
+        }
+        $field = [];
+        foreach ($likeField as $lf) {
+            array_push($field, "$lf");
+        }
+        if (count($likeField) > 1) {
+            $likeField = implode("|", $field);
+        } else {
+            //数组转字符串
+            $likeField = implode("", $field);
+        }
+        if (empty($join)) {
+            //非联合查询
+            return Db::name($tableName)->alias('a')
+                ->where($condition)
+                ->where($likeField, 'like', "%$value%")//模糊搜索
+                ->select();
+        } else {
+            //联合查询
+            switch ($type) {
+                case Search::INNER:
+                    $res = Db::name($tableName)->alias('a')
+                        ->where($condition)
+                        ->where($likeField, 'like', "%$value%")//模糊搜索
+                        ->join([$join])
+                        ->select();
+                    break;
+                case Search::LEFT:
+                    $res = Db::name($tableName)->alias('a')
+                        ->where($condition)
+                        ->where($likeField, 'like', "%$value%")//模糊搜索
+                        ->leftJoin([$join])
+                        ->select();
+                    break;
+                case Search::RIGHT:
+                    $res = Db::name($tableName)->alias('a')
+                        ->where($condition)
+                        ->where($likeField, 'like', "%$value%")//模糊搜索
+                        ->rightJoin([$join])
+                        ->select();
+                    break;
+            }
+            return $res;
+        }
+
+    }
+
 
 }

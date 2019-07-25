@@ -68,12 +68,17 @@ Route::group(":version/goods", function () {
     //立即购买展示要购买的商品
     Route::post("/buy", 'api/Goods/buy')->middleware('token');
 
-    //商品详情立即购买下单预支付单
-    Route::post("/advanceOrder", 'api/Goods/advanceOrder')/*->middleware('token')*/;
+    //1.1商品详情立即购买下单预支付单
+    Route::post("/advanceOrder", 'api/Goods/advanceOrder')->middleware('token');
 
-    //商品详情立即购买支付成功回调地址
+    //1.2商品详情立即购买支付成功回调地址
     Route::post("/advanceOrderNotifyUrl", 'api/Goods/advanceOrderNotifyUrl');
 
+    //2.1商品购物车结算下单预支付订单
+    Route::post("/cartAdvanceOrder", 'api/Goods/cartAdvanceOrder')->middleware('token');
+
+    //2.2商品购物车结算支付成功回调地址
+    Route::post("/cartAdvanceOrderNotifyUrl", 'api/Goods/cartAdvanceOrderNotifyUrl');
 
 
 });
